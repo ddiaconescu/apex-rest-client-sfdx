@@ -739,4 +739,8 @@ private class RestClientTest {
         return randStr;
     }
 
+    public static Integer getRandomInt(Integer lower, Integer upper) {
+        return Math.round(Math.random() * (upper - lower)) + lower;
+    }
+
 }
