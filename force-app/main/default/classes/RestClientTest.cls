@@ -7,7 +7,7 @@
 * Description: Test class for RestClient
 **/
 @IsTest
-private class RestClientTest {
+public class RestClientTest {
 
     /**
      * errors
