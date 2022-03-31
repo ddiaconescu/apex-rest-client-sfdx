@@ -31,7 +31,7 @@ private class RestClientTest {
 
         x_api_key__c apiKey = new x_api_key__c();
         apiKey.Name = namedCredential;
-        apiKey.value__c = TestUtils.generateRandomString(32);
+        apiKey.value__c = generateRandomString(32);
         insert apiKey;
 
         Test.startTest();
@@ -135,7 +135,7 @@ private class RestClientTest {
 
         x_api_key__c apiKey = new x_api_key__c();
         apiKey.Name = namedCredential;
-        apiKey.value__c = TestUtils.generateRandomString(32);
+        apiKey.value__c = generateRandomString(32);
         insert apiKey;
 
         Test.startTest();
@@ -729,5 +729,14 @@ private class RestClientTest {
 
     }
 
+    public static String generateRandomString(Integer len) {
+        final String chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789abcdefghijklmnopqrstuvwxyz';
+        String randStr = '';
+        while (randStr.length() < len) {
+            Integer idx = getRandomInt(0, chars.length() - 1);
+            randStr += chars.substring(idx, idx + 1);
+        }
+        return randStr;
+    }
 
 }

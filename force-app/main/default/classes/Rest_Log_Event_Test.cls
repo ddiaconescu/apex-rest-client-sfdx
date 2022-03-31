@@ -6,7 +6,7 @@
 private class Rest_Log_Event_Test {
     @IsTest
     static void publishEvent() {
-        String testString = TestUtils.generateRandomString(240);
+        String testString = RestClientTest.generateRandomString(240);
         Datetime startTime = system.now();
         Datetime endTime = startTime.addSeconds(1);
 
