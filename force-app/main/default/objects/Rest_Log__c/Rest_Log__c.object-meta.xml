@@ -160,7 +160,12 @@
         <type>AutoNumber</type>
     </nameField>
     <pluralLabel>Rest Logs</pluralLabel>
-    <searchLayouts/>
+    <searchLayouts>
+        <searchResultsAdditionalFields>Endpoint__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Method__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Request_Body__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Response_Body__c</searchResultsAdditionalFields>
+    </searchLayouts>
     <sharingModel>ReadWrite</sharingModel>
     <visibility>Public</visibility>
 </CustomObject>
